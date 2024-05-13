@@ -16,14 +16,14 @@
 
 <script type="text/babel">
 
-    const Card = ({name, date, img}) => {
+    const Card = (props) => {
         return (
             <div className="card">
                 <div className="card-img">
-                    <img className="card-img" src={img} alt={name}/>
+                    <img className="card-img" src={props.img} alt={props.name}/>
                 </div>
-                <h2 className="title">{name}</h2>
-                <p><b>Дата выхода:</b> {date}г.</p>
+                <h2 className="title">{props.name}</h2>
+                <p><b>Дата выхода:</b> {props.date}г.</p>
             </div>
         );
     };
