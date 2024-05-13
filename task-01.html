@@ -16,14 +16,14 @@
 
 <script type="text/babel">
 
-    const Card = props => {
+    const Card = ({name, date, img}) => {
         return (
             <div className="card">
                 <div className="card-img">
-                    <img className="card-img" src={props.img} alt={props.name}/>
+                    <img className="card-img" src={img} alt={name}/>
                 </div>
-                <h2 className="title">{props.name}</h2>
-                <p><b>Дата выхода:</b> {props.date}г.</p>
+                <h2 className="title">{name}</h2>
+                <p><b>Дата выхода:</b> {date}г.</p>
             </div>
         );
     };
@@ -31,12 +31,12 @@
     const movie = (
         <React.Fragment>
             <div className="card-wrap">
-                <Card name="Леон" date={1994}
-                      img="https://cs9.pikabu.ru/post_img/2018/02/11/3/1518319552189271313.jpg"/>
-                <Card name="Побег из Шоушенга" date={1994}
-                      img="https://yeltsin.ru/imageurl/c400x400/archive/image/Jz1JoIyEGzMnE0ufJzkdn1c3GzbX/uploads/upload/2019/10/11/TheShawshankRedemption_still5.jpeg"/>
-                <Card name="Достучаться до небес" date={1997}
-                      img="https://ic.pics.livejournal.com/dubikvit/65747770/3414600/3414600_900.jpg"/>
+                <Card name="Американский пирог" date={1999}
+                      img="https://static.kinoafisha.info/k/movie_posters/canvas/800x1200/upload/movie_posters/9/1/5/6339519/e549e779a2ed040119e28234d38f7dcd.jpg"/>
+                <Card name="Доктор Хаус" date={2004}
+                      img="https://house-doc.ru/posters/1_season.jpeg"/>
+                <Card name="Во все Тяжкие" date={2008}
+                      img="https://www.kino-teatr.ru/movie/posters/big/9/49439.jpg"/>
             </div>
         </React.Fragment>
     );

@@ -3,7 +3,7 @@
 .card-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .card {
@@ -14,7 +14,7 @@
     box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
     padding: 20px;
     width: 250px;
-    height: 400px;
+    height: auto;
     border-radius: 5px;
 }
 
