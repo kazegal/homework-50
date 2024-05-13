@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+    const Header = props => {
+        return (
+            <header className="header container">
+                <div className="header-top">
+                    <a href="#" className="logo">
+                        <img src={props.logoImg} alt={props.name}/>
+                    </a>
+                    <div className="header-info-text">
+                        <p>{props.infoText}</p>
+                    </div>
+                    <div className="contacts">
+                        <span>{props.contact1}</span>
+                        <span>{props.contact2}</span>
+                    </div>
+                    <div className="header-info">
+                        <span className="ic-time">{props.workTime}</span>
+                        <span className="ic-mail">{props.email}</span>
+                    </div>
+                </div>
+                <div className="header-bottom container">
+                    <div className="search-field-wrap">
+                        <input type="text" name="search"
+                               placeholder={props.placeHolder}
+                               className="search-field"/>
+                    </div>
+                    <div className="header-social">
+                        <a href="#" className="icon ic-whatsapp"></a>
+                        <a href="#" className="icon ic-telegram"></a>
+                        <a href="#" className="icon ic-point"></a>
+                    </div>
+                </div>
+            </header>
+        );
+    };
+
+    const Navigation = props => {
+        return (
+            <nav className="main-nav">
+                <div className="main-nav-inner container">
+                    <ul className="main-nav-list">
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{props.link1}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link lin2">{props.link2}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link lin3">{props.link3}</a>
+                        </li>
+                        <li className="main-nav-item">
+                            <a href="#" className="main-nav-link">{props.link4}</a>
+                        </li>
+                    </ul>
+                    <button type="button" className="btn">{props.navBtn}</button>
+                </div>
+            </nav>
+        );
+    };
+
+    const BreadCrumbs = props => {
+        return (
+            <ul className="breadcrumb container">
+                <li><a href="#">{props.main}</a></li>
+                <li className="breadcrumb-selected">{props.tel}</li>
+            </ul>
+        );
+    };
+
+    const Content1 = props => {
+        return (
+            <div className="main-contacts container-2">
+                <h1 className="main-contacts-title">{props.contacts}</h1>
+                <div className="main-contacts-inner">
+                    <div className="contacts-inner-info">
+                        <span className="contacts-mob">{props.tel1}</span>
+                        <span className="contacts-tel">{props.tel2}</span>
+                        <span className="contacts-mail">{props.email}</span>
+                        <span className="contacts-work-time">{props.workTime}</span>
+                        <div className="main-social">
+                            <a href="#" className="main-icon ic-whatsapp"></a>
+                            <a href="#" className="main-icon ic-telegram"></a>
+                            <a href="#" className="main-icon ic-viber"></a>
+                            <a href="#" className="main-icon ic-vk"></a>
+                        </div>
+                    </div>
+                    <div className="contacts-inner-map">
+                        <img src="images/Map.jpg" alt="map"/>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const Content2 = props => {
+        return (
+            <div className="location container">
+                <div className="location-inner">
+                    <div className="location-info">
+                        <span>{props.location}</span>
+                        <p>{props.subtitle}</p>
+                        <div className="form-block">
+                            <form method="post">
+                                <div className="form-row">
+                                    <input autoFocus type="text" id="name" name="name" className="field field-name"
+                                           required placeholder="ФИО*"/>
+                                </div>
+                                <div className="form-block-inner">
+                                    <div className="form-row">
+                                        <input type="text" id="car-mark" name="car-mark" className="field field-car"
+                                               placeholder="Марка машины"/>
+                                    </div>
+                                    <div className="form-row">
+                                        <input type="text" id="car-num" name="car-num" className="field field-num"
+                                               required placeholder="Гос. номер*"/>
+                                    </div>
+                                    <div className="form-row">
+                                        <input type="tel" id="phone" pattern="^7-+([0-9]{3}-[0-9]{3}-[0-9]{2}-0-9]{2})$"
+                                               name="phone" className="field field-tel" required
+                                               placeholder="+7 (___) ___-__-__*"/>
+                                    </div>
+                                    <button type="submit">{props.btn}</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div className="location-map">
+                        <img src="images/map-2.jpg" alt="location"/>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const Footer = props => {
+        return (
+            <footer className="footer">
+                <div className="footer-inner container">
+                    <div className="footer-top">
+                        <span className="footer-top-left">{props.text1}</span>
+                        <span className="footer-top-right">{props.text2}
+                            <a href="#" className="ftr-b">{props.text3}</a>  и <a
+                                href="#" className="ftr-b">{props.text4}</a> Google.</span>
+                    </div>
+
+                    <div className="footer-bottom">
+                        <span className="fb-1"> <a href="#">{props.subText1}</a> </span>
+                        <span className="fb-2"> <a href="#">{props.subText2}</a> </span>
+                        <span className="fb-3">{props.subText3}</span>
+                    </div>
+
+                </div>
+            </footer>
+        );
+    };
+
+    const carpet = (
+        <React.Fragment>
+            <Header logoImg="images/main-logo.png"
+                    name="мир ковролина"
+                    infoText="Продаем ковровые покрытия оптом и в розницу, со склада в Москве. Доставка по всей России и СНГ"
+                    contact1="+7 995 888-35-63"
+                    contact2="8 495 902-71-08"
+                    workTime="Пн-Пт,9:00 до 18:00"
+                    email="zakaz@mir-kovrolina.ru"
+                    placeHolder="Введите навзание товара и выберите нужный из списка"
+            />
+            <Navigation link1='Каталог'
+                        link2="Галерея работ"
+                        link3="О компании"
+                        link4="Контакты"
+                        navBtn="Корзина"
+            />
+            <BreadCrumbs main="Главная"
+                         tel="Контакты"
+            />
+            <Content1 contacts="Контакты"
+                      tel1="+7 995 888-35-63"
+                      tel2="8 495 902-71-08"
+                      email="zakaz@mir-kovrolina.ru"
+                      workTime="Пн-Пт, 9:00 до 18:00"/>
+            <Content2 location="Как до нас добраться на машине"
+                      subtitle="Для проезда на нашу территорию обязательно нужно выписать пропуск на свой автомобиль. Заявку на оформление можно оставить ниже:"
+                      btn="отправить"
+            />
+            <Footer text1="Информация, представленная на сайте, не является публичной офертой. Поэтому не служит поводом для совершения купли-продажи
+            (ч. 2 ст. 437 ГК РФ). Цена и условия продажи обсуждаются с менеджером в индивидуальном порядке."
+                    text2="Сайт защищён сертификатом SSL и применена"
+                    text3="Политика конфиденциальности"
+                    text4="Условия обслуживания"
+                    subText1="Политика конфиденциальности"
+                    subText2="Защита передаваемых данных"
+                    subText3="&copy; Мир-Ковролина. 2011-2021"/>
+        </React.Fragment>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(carpet);
+
+</script>
+</body>
+</html>
