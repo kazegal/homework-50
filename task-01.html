@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+    const Card = props => {
+        return (
+            <div className="card">
+                <div className="card-img">
+                    <img className="card-img" src={props.img} alt={props.name}/>
+                </div>
+                <h2 className="title">{props.name}</h2>
+                <p><b>Дата выхода:</b> {props.date}г.</p>
+            </div>
+        );
+    };
+
+    const movie = (
+        <React.Fragment>
+            <div className="card-wrap">
+                <Card name="Леон" date={1994}
+                      img="https://cs9.pikabu.ru/post_img/2018/02/11/3/1518319552189271313.jpg"/>
+                <Card name="Побег из Шоушенга" date={1994}
+                      img="https://yeltsin.ru/imageurl/c400x400/archive/image/Jz1JoIyEGzMnE0ufJzkdn1c3GzbX/uploads/upload/2019/10/11/TheShawshankRedemption_still5.jpeg"/>
+                <Card name="Достучаться до небес" date={1997}
+                      img="https://ic.pics.livejournal.com/dubikvit/65747770/3414600/3414600_900.jpg"/>
+            </div>
+        </React.Fragment>
+    );
+
+    const root = document.getElementById('root');
+    ReactDOM.createRoot(root).render(movie);
+
+</script>
+</body>
+</html>
