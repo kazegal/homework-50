@@ -17,6 +17,9 @@
     height: auto;
     border-radius: 5px;
 }
+.card:hover {
+    scale: 103%;
+}
 
 .card-img {
     background-repeat: no-repeat;
