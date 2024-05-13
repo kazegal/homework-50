@@ -1,0 +1,190 @@
+@media screen and (max-width: 1170px) {
+
+    .header-top {
+        padding: 0 15px;
+    }
+
+    .header-info {
+        margin: 0px 0 10px 5px;
+    }
+
+    .contacts-inner-info {
+        margin: 0 15px;
+    }
+
+    .footer-top-left {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+
+    .main-contacts-inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .contacts-inner-map img {
+        width: 100%;
+    }
+
+
+    .contacts-inner-info {
+        max-width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .header-info {
+        margin-left: 20px;
+    }
+
+    .search-field-wrap {
+        margin: 0 20px 0 0;
+    }
+
+    .location-inner {
+        flex-direction: column;
+    }
+
+    .location-info {
+        margin: 20px auto;
+    }
+
+    .location-map img {
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 728px) {
+
+    .fb-1 {
+        margin-right: 0;
+    }
+
+    .fb-2 {
+        margin: 0;
+    }
+
+    .contacts span:first-child {
+        margin: 16px 0 0 0;
+    }
+
+    .search-field {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .header-bottom {
+        margin-bottom: 15px;
+    }
+
+    .header-social {
+        margin-top: 32px;
+    }
+
+    .main-nav {
+        background: none;
+    }
+
+    .main-nav-inner {
+        display: block;
+        background: #181818;
+        border-radius: 10px;
+        margin: 0 16px;
+        padding: 30px 0 30px 34px;
+    }
+
+    .main-nav-inner a,
+    .main-nav-inner button {
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+    .main-nav-link {
+        color: #FFFFFF;
+    }
+
+    .main-nav-item {
+        display: block;
+    }
+
+    .main-nav button {
+        display: block;
+        color: #FFFFFF;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .header-info {
+        margin: 0;
+    }
+
+    .header-info-text p {
+        margin-top: 20px;
+    }
+
+    .header-info span {
+        display: inline-block;
+    }
+
+    .header-info span:last-child {
+        margin-left: 10px;
+    }
+
+    .contacts {
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    .form-block-inner {
+        flex-direction: column;
+    }
+
+    .field {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .header-top {
+        padding: 0 0 0 15px;
+    }
+
+    .logo {
+        margin: 8px 29px 0 0;
+    }
+
+    .header-info-text p {
+        max-width: 178px;
+        margin-top: 29px;
+    }
+
+    .contacts span:first-child {
+        margin: 16px 0 14px 0;
+    }
+
+    .ic-mail {
+        margin-left: 28px;
+    }
+
+    .header-info {
+        margin: 0 0 17px 0;
+
+    }
+
+    .search-field {
+        margin-bottom: 1px;
+    }
+}
